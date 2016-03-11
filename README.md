@@ -1,7 +1,7 @@
 #babel-require
 
 ##目前仅支持import ".jsx"文件!
-##Only support import ".jsx" file now.
+##Only support imports ".jsx" file now.
 
 示列(Example):
 ```html
