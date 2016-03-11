@@ -1,7 +1,7 @@
 {
   "name": "babel-require",
   "version": "1.0.0",
-  "description": "一个类似NodeJS的\"require()\"函数，用来帮助Babel在浏览器上直接使用import关键字。 A \"require()\" function like NodeJS, let Babel Browser version support \"import\" keyword.",
+  "description": "一个类似NodeJS的\"require()\"函数，用来帮助Babel在浏览器上直接使用import关键字。 A \"require()\" function like NodeJS, let Babel's browser version support \"import\" keyword.",
   "main": "dest/babel-require.js",
   "directories": {
     "example": "examples"
