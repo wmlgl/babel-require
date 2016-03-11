@@ -1,7 +1,10 @@
 #babel-require
 
-##目前仅支持import ".jsx"文件!
-##Only support imports ".jsx" file now.
+**目前仅支持import ".jsx"文件!**
+**Only support imports ".jsx" file now.**
+
+支持：
+    Babel5.x
 
 示列(Example):
 ```html
