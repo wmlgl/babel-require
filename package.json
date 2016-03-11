@@ -1,0 +1,23 @@
+{
+  "name": "babel-require",
+  "version": "1.0.0",
+  "description": "一个类似NodeJS的\"require()\"函数，用来帮助Babel在浏览器上直接使用import关键字。 A \"require()\" function like NodeJS, let Babel Browser version support \"import\" keyword.",
+  "main": "dest/babel-require.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "webpack & explorer examples/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/wmlgl/babel-require.git"
+  },
+  "keywords": [
+    "babel",
+    "require",
+    "react"
+  ],
+  "author": "wmlgl",
+  "license": "BSD-3-Clause"
+}
