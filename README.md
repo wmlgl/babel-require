@@ -1,6 +1,7 @@
 #babel-require
 
 通过同步AJAX请求实现，性能低下，请只用于开发调试，生产环境请使用webpack等静态编译工具。
+
 Implement by Synchronous AJAX, performance is low, we use it in development and debug, not use it in production environment.
 
 --------------------------------------------------
