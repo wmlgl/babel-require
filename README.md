@@ -1,19 +1,19 @@
 #babel-require
-
+----------------------------------------------
 通过同步AJAX请求实现，性能低下，请只用于开发调试，生产环境请使用webpack等静态编译工具。  
-Implement by Synchronous AJAX, performance is low, we use it in development and debug, not use it in production environment.
+Implement by Synchronous AJAX, performance is low, we use it in development and debug, not use it in production environment.  
 
---------------------------------------------------
+##Supported:
+------------------------------------------------
+支持Babel版本:
+    **Babel5.x**
 
 **目前仅支持import ".jsx"文件!**  
 **Only support imports ".jsx" file now.**
+  
 
-支持：
-    Babel5.x
-
----------------------------------------------------
-
-示列(Example):
+##Example:
+------------------------------------------------
 ```html
 
 <!DOCTYPE html>
@@ -38,7 +38,6 @@ Implement by Synchronous AJAX, performance is low, we use it in development and 
 </script>
 ```
 
-文件：
 ```js
 // file: app/app.jsx
 import Test1 from './loadtest1/test1.jsx'
