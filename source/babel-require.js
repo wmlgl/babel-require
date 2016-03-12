@@ -2,16 +2,13 @@
 	var cmdRequire = require;
 	window.require = function(url) {
 		
-		if(!/.jsx\b/i.test(url)) {
-			url += ".jsx";
-		}
-		
+		var fullpath = require.getFullPath(url);
 		
 		try {
-			return cmdRequire(url);
+			return cmdRequire(fullpath);
 		} catch(e) {
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", url, false);
+			xhr.open("GET", fullpath, false);
 			xhr.send();
 			
 			if(!/^file:/.test(location.protocol) && xhr.status != 200) {
@@ -19,13 +16,31 @@
 			}
 			
 			var code = babel.transform(xhr.responseText).code;
-			require.register(require.resolve(url), new Function("module, exports, require",code));
-			return cmdRequire(url);
+			require.register(require.resolve(fullpath), new Function("module, exports, require",code));
+			return cmdRequire(fullpath);
 		}
+	};
+	
+	require._options = { jsx:[] };
+	require.config = function(options) {
+		this._options = options;
+	};
+	
+	require.getFullPath = function(name) {
+		this._options.jsx.forEach(function(path){
+			if(name.indexOf(path) == 0) {
+				name += ".jsx";
+				return false;
+			} else {
+				name += ".js";
+			}
+		});
+		return name;
 	};
 
 	require.register = cmdRequire.register;
 	require.relative = cmdRequire.relative;
 	require.resolve  = cmdRequire.resolve;
 	require.modules  = cmdRequire.modules;
+	
 })();

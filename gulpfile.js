@@ -13,7 +13,7 @@ gulp.task('build', function() {
         .pipe(gulp.dest('dest/'));  //输出
 });
 
-gulp.task('copy2demo', function() {
+gulp.task('copy2demo',['build'], function() {
     return gulp.src('dest/*.js')
         .pipe(gulp.dest('examples/dest/'));    //输出main.js到文件夹
 });
@@ -22,4 +22,4 @@ gulp.task('clean', function(cb) {
     del(['dest/*'], cb)
 });
 
-gulp.task('default', ['build','copy2demo']);
+gulp.task('default', ['copy2demo']);
