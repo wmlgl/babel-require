@@ -6,11 +6,7 @@ Implement by Synchronous AJAX, performance is low, we use it in development and 
 ##Supported:
 ------------------------------------------------
 支持Babel版本:
-    **Babel5.x**
-
-**目前仅支持import ".jsx"文件!**  
-**Only support imports ".jsx" file now.**
-  
+    **Babel5.x**  
 
 ##Example:
 ------------------------------------------------
