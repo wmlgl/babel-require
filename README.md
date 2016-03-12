@@ -8,9 +8,30 @@ Implement by Synchronous AJAX, performance is low, we use it in development and 
 支持Babel版本:
     **Babel5.x**  
 
+
+##Config:
+-----------------------------------------------
+加载模块时，如果配置了jsx，并且该模块属于jsx项配置的目录下，则加载".jsx"文件，否则加载".js"文件。
+Config exmaple:
+```HTML
+<script type="text/javascript">
+require.config({
+    jsx: ["app"]
+});
+</script>
+<script type="text/babel">
+    // 会加载"app/app.jsx"
+    // Will be load "app/app.jsx"
+    import App from "app/app";
+
+    // 会加载"lib/hello.js"
+    // Will be load "lib/hello.js"
+    import Hello from "lib/hello";
+</script>
+```
 ##Example:
 ------------------------------------------------
-```html
+```HTML
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +55,7 @@ Implement by Synchronous AJAX, performance is low, we use it in development and 
 </script>
 ```
 
-```js
+```jsx
 // file: app/app.jsx
 import Test1 from './loadtest1/test1.jsx'
 import Test2 from './loadtest2/test2.jsx'
