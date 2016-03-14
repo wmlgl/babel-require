@@ -48,14 +48,24 @@ require.config({
 		<div id="container">loading...</div>
 	</body>
 </html>
+<script type="text/javascript">
+	require.config({
+		jsx: [
+			"app"
+		]
+	});
+</script>
 <script type="text/babel">
-	import App from "app/app";
+	import App from "app/app"; 			// load jsx file
+	import Hello from "lib/hello";		//load normal CMD module
 	
+	alert(Hello.say);
 	ReactDOM.render(<App/>, document.getElementById('container'));
 </script>
 ```
 
 ```jsx
+
 // file: app/app.jsx
 import Test1 from './loadtest1/test1.jsx'
 import Test2 from './loadtest2/test2.jsx'
